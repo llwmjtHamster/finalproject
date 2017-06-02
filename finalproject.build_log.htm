@@ -17,23 +17,50 @@ Library Manager: ArmAr.exe V5.06 update 2 (build 183)
 Hex Converter:   FromElf.exe V5.06 update 2 (build 183)
 CPU DLL:         SARMCM3.DLL V5.20
 Dialog DLL:      DARMCM1.DLL V1.14.0.0
-Target DLL:      UL2CM3.DLL V1.157.18.0
+Target DLL:      Segger\JL2CM3.dll V2.99.20.0
 Dialog DLL:      TARMCM1.DLL V1.10.0.0
  
 <h2>Project:</h2>
 E:\大二下\单片机（刘龙）\DPL\finalproject\out\finalproject.uvprojx
-Project File Date:  05/26/2017
+Project File Date:  06/02/2017
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 2 (build 183)', folder: 'C:\Program Files (x86)\ARM\ARMCC\Bin'
-Build target 'final'
+Rebuild target 'final'
 compiling UART.c...
-UART.h(15): warning:  #1-D: last line of file ends without a newline
+..\src\UART.h(13): warning:  #1-D: last line of file ends without a newline
   #endif
-UART.c: 1 warning, 0 errors
+..\src\UART.c: 1 warning, 0 errors
+compiling main.c...
+..\src\UART.h(13): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\src\ADC.h(9): warning:  #1-D: last line of file ends without a newline
+  #endif
+main.c: 2 warnings, 0 errors
+compiling ADC.c...
+..\src\ADC.h(9): warning:  #1-D: last line of file ends without a newline
+  #endif
+ADC.c: 1 warning, 0 errors
+assembling startup_LPC11xx.s...
+compiling INIT.c...
+..\src\UART.h(13): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\src\ADC.h(9): warning:  #1-D: last line of file ends without a newline
+  #endif
+INIT.c(21): warning:  #223-D: function "GPIOInit" declared implicitly
+  	GPIOInit();
+INIT.c(115): warning:  #223-D: function "Dislay" declared implicitly
+  			Dislay(result);   //???牍???示???隙?
+INIT.c(120): warning:  #223-D: function "Dislay" declared implicitly
+  			Dislay(result);   //???牍???示华?隙?
+INIT.c: 5 warnings, 0 errors
+compiling system_LPC11xx.c...
 linking...
-Program Size: Code=964 RO-data=224 RW-data=4 ZI-data=612  
-".\finalproject.axf" - 0 Error(s), 1 Warning(s).
+..\finalproject.axf: Error: L6218E: Undefined symbol Dislay (referred from init.o).
+..\finalproject.axf: Error: L6218E: Undefined symbol GPIOInit (referred from init.o).
+Not enough information to list image symbols.
+Finished: 1 information, 0 warning and 2 error messages.
+"..\finalproject.axf" - 2 Error(s), 9 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -61,7 +88,8 @@ Package Vendor: Keil
    * Component: Keil::Device:Startup:1.0.0
       Source file:   Device\Source\ARM\startup_LPC11xx.s
       Source file:   Device\Source\system_LPC11xx.c
-Build Time Elapsed:  00:00:01
+Target not created.
+Build Time Elapsed:  00:00:02
 </pre>
 </body>
 </html>

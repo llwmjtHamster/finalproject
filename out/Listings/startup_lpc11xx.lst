@@ -360,12 +360,12 @@ ARM Macro Assembler    Page 6
               00000200 
               00000000 
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M0 --apcs=interw
-ork --depend=.\startup_lpc11xx.d -o.\startup_lpc11xx.o -IE:\大二下\单片机（刘龙
-）\DPL\finalproject\out\RTE -I"C:\Program Files (x86)\ARM\PACK\ARM\CMSIS\4.5.0\
-CMSIS\Include" -I"C:\Program Files (x86)\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device
-\Include\LPC11xx" --predefine="__UVISION_VERSION SETA 520" --predefine="_RTE_ S
-ETA 1" --list=.\listings\startup_lpc11xx.lst RTE\Device\LPC1114FBD48_301\startu
-p_LPC11xx.s
+ork --depend=..\startup_lpc11xx.d -o..\startup_lpc11xx.o -IE:\大二下\单片机（刘
+龙）\DPL\finalproject\out\RTE -I"C:\Program Files (x86)\ARM\PACK\ARM\CMSIS\4.5.
+0\CMSIS\Include" -I"C:\Program Files (x86)\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Devi
+ce\Include\LPC11xx" --predefine="__UVISION_VERSION SETA 520" --predefine="_RTE_
+ SETA 1" --list=.\listings\startup_lpc11xx.lst RTE\Device\LPC1114FBD48_301\star
+tup_LPC11xx.s
 
 
 

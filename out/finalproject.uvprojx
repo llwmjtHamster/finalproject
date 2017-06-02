@@ -47,7 +47,7 @@
             <NotGenerated>0</NotGenerated>
             <InvalidFlash>1</InvalidFlash>
           </TargetStatus>
-          <OutputDirectory>.\</OutputDirectory>
+          <OutputDirectory>..\</OutputDirectory>
           <OutputName>finalproject</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
@@ -334,7 +334,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>..\src</IncludePath>
+              <IncludePath>..\src;..\out</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -395,7 +395,12 @@
             <File>
               <FileName>UART.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\UART.c</FilePath>
+              <FilePath>..\src\UART.c</FilePath>
+            </File>
+            <File>
+              <FileName>INIT.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\INIT.c</FilePath>
             </File>
           </Files>
         </Group>
