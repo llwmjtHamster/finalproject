@@ -403,9 +403,9 @@
               <FilePath>.\INIT.c</FilePath>
             </File>
             <File>
-              <FileName>Display.c</FileName>
+              <FileName>Digital.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Display.c</FilePath>
+              <FilePath>.\Digital.c</FilePath>
             </File>
           </Files>
         </Group>

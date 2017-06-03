@@ -3,7 +3,7 @@
 #include "INIT.h"     //系统初始化及中断,配置GPIO
 #include "UART.h"    //串口通信
 #include "ADC.h"    //ADC 温度传感器
-#include "Display.h"//数码管显示
+#include "Digital.h"//数码管显示
 /********************************************************************************
 * FunctionName   : main()
 * Description    : 主程序 可以显示当前温度 超过温度自动散热 切换手动和自动模式 

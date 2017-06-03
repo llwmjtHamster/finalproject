@@ -3,7 +3,7 @@
 "..\adc.o"
 "..\uart.o"
 "..\init.o"
-"..\display.o"
+"..\digital.o"
 "..\startup_lpc11xx.o"
 "..\system_lpc11xx.o"
 --strict --scatter "..\finalproject.sct"

@@ -3,7 +3,7 @@
 #include "INIT.h"      //系统初始化和中断，配置GPIO
 #include "UART.h"     //串口通信
 #include "ADC.h"     //ADC 温度传感器
-#include "Display.h"
+#include "Digital.h"
 
 int result;            //定义当前温度
 int flag=0;            //手动自动标志 0为自动 1为手动
@@ -19,10 +19,11 @@ int trans=0;           // 0为摄氏度 1为华氏度
 
 void SYSINIT(void)
 {
+	GPIOInit();
 	ADC_Init();
 	UART_Init();
 	INT3();
-	GPIOINIT();
+	MYGPIOINIT();
 	NVIC_EnableIRQ(EINT3_IRQn);
 }
 
@@ -112,12 +113,12 @@ void translation(void)
 {
 	if(trans == 0)
 		{
-			Display(result);   //数码管显示摄氏度
+			Dislay(result);   //数码管显示摄氏度
 		}
 		if(trans == 1)
 		{
 			result=(int)(result*1.8+32);
-			Display(result);   //数码管显示华氏度
+			Dislay(result);   //数码管显示华氏度
 		}
 }
 void INT3()
@@ -161,7 +162,7 @@ void PIOINT3_IRQHandler()
 			LPC_GPIO3->IC = (1<<0);                  //消除中断标志
 		}
 }
-void GPIOINIT(void)
+void MYGPIOINIT(void)
 {
 		LPC_SYSCON->SYSAHBCLKCTRL |= (1 << 16);
 		LPC_IOCON->R_PIO1_2  &= ~0x07;
