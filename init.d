@@ -11,3 +11,4 @@
 ..\init.o: C:\Program Files (x86)\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC11xx\system_LPC11xx.h
 ..\init.o: ..\src\UART.h
 ..\init.o: ..\src\ADC.h
+..\init.o: Display.h

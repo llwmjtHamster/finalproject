@@ -28,39 +28,40 @@ Project File Date:  06/02/2017
 *** Using Compiler 'V5.06 update 2 (build 183)', folder: 'C:\Program Files (x86)\ARM\ARMCC\Bin'
 Rebuild target 'final'
 compiling UART.c...
-..\src\UART.h(13): warning:  #1-D: last line of file ends without a newline
+..\src\UART.h(14): warning:  #1-D: last line of file ends without a newline
   #endif
 ..\src\UART.c: 1 warning, 0 errors
 compiling main.c...
-..\src\UART.h(13): warning:  #1-D: last line of file ends without a newline
+..\src\UART.h(14): warning:  #1-D: last line of file ends without a newline
   #endif
 ..\src\ADC.h(9): warning:  #1-D: last line of file ends without a newline
   #endif
-main.c: 2 warnings, 0 errors
+Display.h(10): warning:  #1-D: last line of file ends without a newline
+  #endif
+main.c: 3 warnings, 0 errors
 compiling ADC.c...
 ..\src\ADC.h(9): warning:  #1-D: last line of file ends without a newline
   #endif
 ADC.c: 1 warning, 0 errors
 assembling startup_LPC11xx.s...
 compiling INIT.c...
-..\src\UART.h(13): warning:  #1-D: last line of file ends without a newline
+..\src\UART.h(14): warning:  #1-D: last line of file ends without a newline
   #endif
 ..\src\ADC.h(9): warning:  #1-D: last line of file ends without a newline
   #endif
-INIT.c(21): warning:  #223-D: function "GPIOInit" declared implicitly
-  	GPIOInit();
-INIT.c(115): warning:  #223-D: function "Dislay" declared implicitly
-  			Dislay(result);   //???ë¹???Ê¾???Ï¶?
-INIT.c(120): warning:  #223-D: function "Dislay" declared implicitly
-  			Dislay(result);   //???ë¹???Ê¾»ª?Ï¶?
-INIT.c: 5 warnings, 0 errors
+Display.h(10): warning:  #1-D: last line of file ends without a newline
+  #endif
+INIT.c: 3 warnings, 0 errors
+compiling Display.c...
+Display.h(10): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\src\UART.h(14): warning:  #1-D: last line of file ends without a newline
+  #endif
+Display.c: 2 warnings, 0 errors
 compiling system_LPC11xx.c...
 linking...
-..\finalproject.axf: Error: L6218E: Undefined symbol Dislay (referred from init.o).
-..\finalproject.axf: Error: L6218E: Undefined symbol GPIOInit (referred from init.o).
-Not enough information to list image symbols.
-Finished: 1 information, 0 warning and 2 error messages.
-"..\finalproject.axf" - 2 Error(s), 9 Warning(s).
+Program Size: Code=5008 RO-data=224 RW-data=332 ZI-data=628  
+"..\finalproject.axf" - 0 Error(s), 10 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -88,7 +89,6 @@ Package Vendor: Keil
    * Component: Keil::Device:Startup:1.0.0
       Source file:   Device\Source\ARM\startup_LPC11xx.s
       Source file:   Device\Source\system_LPC11xx.c
-Target not created.
 Build Time Elapsed:  00:00:02
 </pre>
 </body>

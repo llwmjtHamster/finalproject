@@ -1,6 +1,7 @@
 #ifndef _UART_H
 #define _UART_H
 #include "LPC11xx.h"
+
 #define UART_BPS 115200               //设置波特率为115200
 
 extern void UART_Init (void);        //串口初始化，设置为8位数据位，1为停止位，无奇偶校验，波特率为115200

@@ -402,6 +402,11 @@
               <FileType>1</FileType>
               <FilePath>.\INIT.c</FilePath>
             </File>
+            <File>
+              <FileName>Display.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Display.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

@@ -10,3 +10,4 @@
 ..\main.o: INIT.h
 ..\main.o: ..\src\UART.h
 ..\main.o: ..\src\ADC.h
+..\main.o: Display.h
