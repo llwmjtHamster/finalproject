@@ -17,7 +17,7 @@ int temp[75]={23393,22364,21385,20452,19564,18719,
 * ReturnValue    : None
 ********************************************************************************/
 
-void DelayADC(uint32_t ulTime)
+void DelayADC(uint32_t ulTime) 
 {
    uint32_t i;
    i = 0;
@@ -37,11 +37,11 @@ void DelayADC(uint32_t ulTime)
 void ADC_Init(void)
 {
     LPC_SYSCON->SYSAHBCLKCTRL |= (1 << 16);
-    LPC_IOCON->R_PIO1_0 &= ~0xBF; //PIO1_0为模拟输入模式
-    LPC_IOCON->R_PIO1_0 |=  0x02; //PIO1_0模拟输入通道1
+    LPC_IOCON->PIO1_11 &= ~0xBF; //PIO1_0为模拟输入模式
+    LPC_IOCON->PIO1_11 |=  0x02; //PIO1_0模拟输入通道1
     LPC_SYSCON->PDRUNCFG &= ~(0x01 << 4); //ADC模块上电
     LPC_SYSCON->SYSAHBCLKCTRL |=  (0x01 << 13); //使能ADC模块时钟 
-    LPC_ADC->CR = ( 0x02 << 0 ) |  //SEL=1,选择ADC1
+    LPC_ADC->CR = ( 0x01 << 7 ) |  //SEL=1,选择ADC7
                   ((SystemCoreClock / 1000000 - 1) << 8 ) | //转换时钟1MHz 
                   ( 0 << 16 ) | //软件控制转换操作
                   ( 0 << 17 ) | //使能11clocks转换
@@ -59,10 +59,10 @@ int ADCData(void)
 			for (i = 0; i < 10; i++)                                                  
 			{                                                                 
 				LPC_ADC->CR |= (1 << 24);	//立即转换               
-				while((LPC_ADC->DR[1] & 0x80000000) == 0);	//读取DR0的Done        
+				while((LPC_ADC->DR[7] & 0x80000000) == 0);	//读取DR0的Done        
 				LPC_ADC->CR |= (1 <<24);	// 第一次转换结果丢弃     
-				while((LPC_ADC->DR[1] & 0x80000000) == 0);	//读取DR0的Done        
-				ulADCBuf = LPC_ADC->DR[1];	//读取结果寄存器         
+				while((LPC_ADC->DR[7] & 0x80000000) == 0);	//读取DR0的Done        
+				ulADCBuf = LPC_ADC->DR[7];	//读取结果寄存器         
 				ulADCBuf = (ulADCBuf >> 6) & 0x3ff;	//数据位从第6位开始存储，占据10位                       
 				ulADCData += ulADCBuf;	//数据累加			
 			}
@@ -70,6 +70,7 @@ int ADCData(void)
 			ulADCData = (ulADCData * 3300) / 1024;	//数字量转换为模拟量
 			
 			Rt=((ulADCData*10000)/(3300-ulADCData));  //计算温敏电阻值
+		
 			for(i=0;i<75;i++)                         //通过电阻值匹配温度表
 			{
 				if(Rt >= temp[i])
