@@ -6,7 +6,7 @@
 #include "Digital.h"
 #include "LPC11xx.h"
 
-int result;            //定义当前温度
+float result;            //定义当前温度
 int flag=0;            //手动自动标志 0为自动 1为手动
 int rotate=0;          //当前风扇旋转状态
 int trans=0;           // 0为摄氏度 1为华氏度

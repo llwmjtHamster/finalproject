@@ -2,7 +2,7 @@
 #define _INIT_H
 #include "LPC11xx.h"
 
-extern int result;          //温度结果
+extern float result;
 extern int flag;            //手动自动标志 0为自动 1为手动
 extern int trans;           // 0为摄氏度 1为华氏度
 extern void SYSINIT(void);   //系统初始化

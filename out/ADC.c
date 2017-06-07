@@ -51,11 +51,11 @@ void ADC_Init(void)
                   ( 0 << 27 );  //直接启动ADC转换,此位无效
 }
 
-int ADCData(void)
+float ADCData(void)
 {
+			float result;
 			uint32_t  i;
-			uint32_t  j;
-			int Rt=0;
+			uint32_t  Rt=0;
 	    uint32_t  ulADCData; 
 			uint32_t  ulADCBuf;
 			ulADCData = 0;                                                            
@@ -76,13 +76,16 @@ int ADCData(void)
 		
 			for(i=0;i<100;i++)                         //通过电阻值匹配温度表
 			{
-				if(Rt >= temp[i])
+				if(Rt <= temp[i] && Rt >= temp[i+1])
 				{
-					result=i;
+					result=CaculTwoPoint(temp[i], i, temp[i+1], i+1, Rt);
 					break;
 				}
 			}
 			return result;
 }
-
+float CaculTwoPoint(float x1, float y1, float x2, float y2, float x)
+{
+    return result=y1 + ((y2 - y1) * (x - x1)) / (x2 - x1);
+}
 	

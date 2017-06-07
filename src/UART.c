@@ -86,12 +86,12 @@ void Judge(void)
 					{
 						if(trans == 0)
 						{
-						sprintf(GcRcvBuf," 温度 =%4d  \r\n",result);
+						sprintf(GcRcvBuf," 温度 =%4f  \r\n",result);
 						UART_SendStr(GcRcvBuf);
 						}
 						if(trans == 1)
 						{
-						sprintf(GcRcvBuf," 华氏度 =%4d  \r\n",(int)(result*1.8+32));
+						sprintf(GcRcvBuf," 华氏度 =%4f  \r\n",(float)(result*1.8+32));
 						UART_SendStr(GcRcvBuf);
 						}
 					}
