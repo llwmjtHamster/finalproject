@@ -1,5 +1,5 @@
 Dependencies for Project 'finalproject', Target 'final': (DO NOT MODIFY !)
-F (.\main.c)(0x5937DD5D)(-c --cpu Cortex-M0 -g -O0 --apcs=interwork --split_sections -I ..\src -I ..\out-I E:\大二下\单片机（刘龙）\DPL\finalproject\out\RTE-I "C:\Program Files (x86)\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include"-I "C:\Program Files (x86)\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC11xx"-D__UVISION_VERSION="520" -D_RTE_-o ..\main.o --omf_browse ..\main.crf --depend ..\main.d)
+F (.\main.c)(0x5938DCB9)(-c --cpu Cortex-M0 -g -O0 --apcs=interwork --split_sections -I ..\src -I ..\out-I E:\大二下\单片机（刘龙）\DPL\finalproject\out\RTE-I "C:\Program Files (x86)\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include"-I "C:\Program Files (x86)\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC11xx"-D__UVISION_VERSION="520" -D_RTE_-o ..\main.o --omf_browse ..\main.crf --depend ..\main.d)
 I (C:\Program Files (x86)\ARM\ARMCC\include\string.h)(0x56FE42DE)
 I (C:\Program Files (x86)\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC11xx\LPC11xx.h)(0x4FF4FDF8)
 I (C:\Program Files (x86)\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include\core_cm0.h)(0x5625B70C)
@@ -8,10 +8,11 @@ I (C:\Program Files (x86)\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include\core_cmInstr.h)
 I (C:\Program Files (x86)\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include\cmsis_armcc.h)(0x5625A350)
 I (C:\Program Files (x86)\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include\core_cmFunc.h)(0x5625A350)
 I (C:\Program Files (x86)\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC11xx\system_LPC11xx.h)(0x4CF35218)
-I (INIT.h)(0x5937DE5F)
+I (INIT.h)(0x5938DC6E)
 I (..\src\UART.h)(0x5937DDA9)
 I (..\src\ADC.h)(0x5937DAB5)
-I (Digital.h)(0x5932B326)
+I (oleddelay.h)(0x59380466)
+I (oled.h)(0x5938DB79)
 F (.\ADC.c)(0x5937DF4A)(-c --cpu Cortex-M0 -g -O0 --apcs=interwork --split_sections -I ..\src -I ..\out-I E:\大二下\单片机（刘龙）\DPL\finalproject\out\RTE-I "C:\Program Files (x86)\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include"-I "C:\Program Files (x86)\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC11xx"-D__UVISION_VERSION="520" -D_RTE_-o ..\adc.o --omf_browse ..\adc.crf --depend ..\adc.d)
 I (..\src\ADC.h)(0x5937DAB5)
 I (C:\Program Files (x86)\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC11xx\LPC11xx.h)(0x4FF4FDF8)
@@ -22,7 +23,7 @@ I (C:\Program Files (x86)\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include\cmsis_armcc.h)(
 I (C:\Program Files (x86)\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include\core_cmFunc.h)(0x5625A350)
 I (C:\Program Files (x86)\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC11xx\system_LPC11xx.h)(0x4CF35218)
 I (C:\Program Files (x86)\ARM\ARMCC\include\math.h)(0x56FE42D6)
-I (INIT.h)(0x5937DE5F)
+I (INIT.h)(0x5938DC6E)
 F (..\src\UART.c)(0x5937DE40)(-c --cpu Cortex-M0 -g -O0 --apcs=interwork --split_sections -I ..\src -I ..\out-I E:\大二下\单片机（刘龙）\DPL\finalproject\out\RTE-I "C:\Program Files (x86)\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include"-I "C:\Program Files (x86)\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC11xx"-D__UVISION_VERSION="520" -D_RTE_-o ..\uart.o --omf_browse ..\uart.crf --depend ..\uart.d)
 I (..\src\UART.h)(0x5937DDA9)
 I (C:\Program Files (x86)\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC11xx\LPC11xx.h)(0x4FF4FDF8)
@@ -32,12 +33,12 @@ I (C:\Program Files (x86)\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include\core_cmInstr.h)
 I (C:\Program Files (x86)\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include\cmsis_armcc.h)(0x5625A350)
 I (C:\Program Files (x86)\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include\core_cmFunc.h)(0x5625A350)
 I (C:\Program Files (x86)\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC11xx\system_LPC11xx.h)(0x4CF35218)
-I (..\out\INIT.h)(0x5937DE5F)
+I (..\out\INIT.h)(0x5938DC6E)
 I (C:\Program Files (x86)\ARM\ARMCC\include\stdio.h)(0x56FE42DE)
-F (.\INIT.c)(0x5937DAFE)(-c --cpu Cortex-M0 -g -O0 --apcs=interwork --split_sections -I ..\src -I ..\out-I E:\大二下\单片机（刘龙）\DPL\finalproject\out\RTE-I "C:\Program Files (x86)\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include"-I "C:\Program Files (x86)\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC11xx"-D__UVISION_VERSION="520" -D_RTE_-o ..\init.o --omf_browse ..\init.crf --depend ..\init.d)
+F (.\INIT.c)(0x5938CC67)(-c --cpu Cortex-M0 -g -O0 --apcs=interwork --split_sections -I ..\src -I ..\out-I E:\大二下\单片机（刘龙）\DPL\finalproject\out\RTE-I "C:\Program Files (x86)\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include"-I "C:\Program Files (x86)\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC11xx"-D__UVISION_VERSION="520" -D_RTE_-o ..\init.o --omf_browse ..\init.crf --depend ..\init.d)
 I (C:\Program Files (x86)\ARM\ARMCC\include\stdio.h)(0x56FE42DE)
 I (C:\Program Files (x86)\ARM\ARMCC\include\string.h)(0x56FE42DE)
-I (INIT.h)(0x5937DE5F)
+I (INIT.h)(0x5938DC6E)
 I (C:\Program Files (x86)\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC11xx\LPC11xx.h)(0x4FF4FDF8)
 I (C:\Program Files (x86)\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include\core_cm0.h)(0x5625B70C)
 I (C:\Program Files (x86)\ARM\ARMCC\include\stdint.h)(0x56FE42DE)
@@ -47,9 +48,22 @@ I (C:\Program Files (x86)\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include\core_cmFunc.h)(
 I (C:\Program Files (x86)\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC11xx\system_LPC11xx.h)(0x4CF35218)
 I (..\src\UART.h)(0x5937DDA9)
 I (..\src\ADC.h)(0x5937DAB5)
-I (Digital.h)(0x5932B326)
-F (.\Digital.c)(0x5932B64F)(-c --cpu Cortex-M0 -g -O0 --apcs=interwork --split_sections -I ..\src -I ..\out-I E:\大二下\单片机（刘龙）\DPL\finalproject\out\RTE-I "C:\Program Files (x86)\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include"-I "C:\Program Files (x86)\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC11xx"-D__UVISION_VERSION="520" -D_RTE_-o ..\digital.o --omf_browse ..\digital.crf --depend ..\digital.d)
-I (Digital.h)(0x5932B326)
+I (oled.h)(0x5938DB79)
+F (.\Digital.c)(0x59380F11)(-c --cpu Cortex-M0 -g -O0 --apcs=interwork --split_sections -I ..\src -I ..\out-I E:\大二下\单片机（刘龙）\DPL\finalproject\out\RTE-I "C:\Program Files (x86)\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include"-I "C:\Program Files (x86)\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC11xx"-D__UVISION_VERSION="520" -D_RTE_-o ..\digital.o --omf_browse ..\digital.crf --depend ..\digital.d)
+F (.\oled.c)(0x5938D3B1)(-c --cpu Cortex-M0 -g -O0 --apcs=interwork --split_sections -I ..\src -I ..\out-I E:\大二下\单片机（刘龙）\DPL\finalproject\out\RTE-I "C:\Program Files (x86)\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include"-I "C:\Program Files (x86)\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC11xx"-D__UVISION_VERSION="520" -D_RTE_-o ..\oled.o --omf_browse ..\oled.crf --depend ..\oled.d)
+I (oled.h)(0x5938DB79)
+I (C:\Program Files (x86)\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC11xx\lpc11xx.h)(0x4FF4FDF8)
+I (C:\Program Files (x86)\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include\core_cm0.h)(0x5625B70C)
+I (C:\Program Files (x86)\ARM\ARMCC\include\stdint.h)(0x56FE42DE)
+I (C:\Program Files (x86)\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include\core_cmInstr.h)(0x5625A350)
+I (C:\Program Files (x86)\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include\cmsis_armcc.h)(0x5625A350)
+I (C:\Program Files (x86)\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include\core_cmFunc.h)(0x5625A350)
+I (C:\Program Files (x86)\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC11xx\system_LPC11xx.h)(0x4CF35218)
+I (C:\Program Files (x86)\ARM\ARMCC\include\stdlib.h)(0x56FE42DE)
+I (oledfont.h)(0x593802C4)
+I (oleddelay.h)(0x59380466)
+F (.\oleddelay.c)(0x593809C3)(-c --cpu Cortex-M0 -g -O0 --apcs=interwork --split_sections -I ..\src -I ..\out-I E:\大二下\单片机（刘龙）\DPL\finalproject\out\RTE-I "C:\Program Files (x86)\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include"-I "C:\Program Files (x86)\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC11xx"-D__UVISION_VERSION="520" -D_RTE_-o ..\oleddelay.o --omf_browse ..\oleddelay.crf --depend ..\oleddelay.d)
+I (oleddelay.h)(0x59380466)
 I (C:\Program Files (x86)\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC11xx\LPC11xx.h)(0x4FF4FDF8)
 I (C:\Program Files (x86)\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include\core_cm0.h)(0x5625B70C)
 I (C:\Program Files (x86)\ARM\ARMCC\include\stdint.h)(0x56FE42DE)
@@ -57,7 +71,6 @@ I (C:\Program Files (x86)\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include\core_cmInstr.h)
 I (C:\Program Files (x86)\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include\cmsis_armcc.h)(0x5625A350)
 I (C:\Program Files (x86)\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include\core_cmFunc.h)(0x5625A350)
 I (C:\Program Files (x86)\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC11xx\system_LPC11xx.h)(0x4CF35218)
-I (INIT.h)(0x5937DE5F)
 F (RTE\Device\LPC1114FBD48_301\startup_LPC11xx.s)(0x4CF35218)(--cpu Cortex-M0 -g --apcs=interwork -I E:\大二下\单片机（刘龙）\DPL\finalproject\out\RTE-I "C:\Program Files (x86)\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include"-I "C:\Program Files (x86)\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC11xx"--pd "__UVISION_VERSION SETA 520" --pd "_RTE_ SETA 1"--list .\listings\startup_lpc11xx.lst --xref -o ..\startup_lpc11xx.o --depend ..\startup_lpc11xx.d)
 F (RTE\Device\LPC1114FBD48_301\system_LPC11xx.c)(0x4CF35218)(-c --cpu Cortex-M0 -g -O0 --apcs=interwork --split_sections -I ..\src -I ..\out-I E:\大二下\单片机（刘龙）\DPL\finalproject\out\RTE-I "C:\Program Files (x86)\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include"-I "C:\Program Files (x86)\ARM\PACK\Keil\LPC1100_DFP\1.4.0\Device\Include\LPC11xx"-D__UVISION_VERSION="520" -D_RTE_-o ..\system_lpc11xx.o --omf_browse ..\system_lpc11xx.crf --depend ..\system_lpc11xx.d)
 I (C:\Program Files (x86)\ARM\ARMCC\include\stdint.h)(0x56FE42DE)

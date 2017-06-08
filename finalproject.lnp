@@ -4,6 +4,8 @@
 "..\uart.o"
 "..\init.o"
 "..\digital.o"
+"..\oled.o"
+"..\oleddelay.o"
 "..\startup_lpc11xx.o"
 "..\system_lpc11xx.o"
 --strict --scatter "..\finalproject.sct"

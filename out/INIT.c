@@ -3,13 +3,17 @@
 #include "INIT.h"      //系统初始化和中断，配置GPIO
 #include "UART.h"     //串口通信
 #include "ADC.h"     //ADC 温度传感器
-#include "Digital.h"
+//#include "Digital.h"
 #include "LPC11xx.h"
+#include "oled.h"
 
 float result;            //定义当前温度
 int flag=0;            //手动自动标志 0为自动 1为手动
 int rotate=0;          //当前风扇旋转状态
 int trans=0;           // 0为摄氏度 1为华氏度
+unsigned char buff[50];
+
+
 
 /********************************************************************************
 * FunctionName   : SYSINIT()
@@ -20,7 +24,7 @@ int trans=0;           // 0为摄氏度 1为华氏度
 
 void SYSINIT(void)
 {
-	GPIOInit();
+//	GPIOInit();
 	ADC_Init();
 	UART_Init();
 	MYGPIOINIT();
@@ -55,7 +59,7 @@ void mode(void)     //配置系统设备，串行端口
 	{
 				if(rotate == 0)  //风扇状态 0:风扇不转 1:风扇转动
 				{
-				 LPC_GPIO1->DATA  = ~(LPC_GPIO2->DATA);	  //对于现状态 ,取反
+				 LPC_GPIO2->DATA  = ~(LPC_GPIO2->DATA);	  //对于现状态 ,取反
 					rotate=1;
 				}
 				
@@ -64,7 +68,7 @@ void mode(void)     //配置系统设备，串行端口
 	{
 				if(rotate == 1)
 				{
-					LPC_GPIO1->DATA  &= ~(1<<2);	
+					LPC_GPIO2->DATA  &= ~(1<<2);	
 						rotate=0;
 				}
 				
@@ -73,7 +77,7 @@ void mode(void)     //配置系统设备，串行端口
 	{
 				if(rotate == 0)
 				{
-				 LPC_GPIO1->DATA  |= (1<<2) ;	
+				 LPC_GPIO2->DATA  |= (1<<2) ;	
 					rotate=1;
 				}
 				
@@ -93,12 +97,12 @@ void resultmode(void)
 	{
 		if(result > 18)
 		{
-			LPC_GPIO1->DATA |= (1<<2);
+			LPC_GPIO2->DATA |= (1<<2);
 			rotate = 1;   //标志风扇旋转
 		}
 		else
 		{
-			LPC_GPIO1->DATA &= ~(1<<2);
+			LPC_GPIO2->DATA &= ~(1<<2);
 			rotate = 0;  //标志风扇不旋转
 		}
 	}
@@ -114,12 +118,15 @@ void translation(void)
 {
 	if(trans == 0)
 		{
-			Dislay(result);   //数码管显示摄氏度
+			sprintf(buff,"temperature : %f",result);
+			OLED_ShowString(0,0,buff);   //数码管显示摄氏度
 		}
 		if(trans == 1)
 		{
-			result=(int)(result*1.8+32);
-			Dislay(result);   //数码管显示华氏度
+			result=(float)(result*1.8+32);    //数码管显示华氏度
+			sprintf(buff,"temperature : %f",result);
+			OLED_ShowString(0,0,buff);   //数码管显示摄氏度
+			
 		}
 }
 void INT3()      //摄氏华氏转换中断

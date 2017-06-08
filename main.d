@@ -10,4 +10,5 @@
 ..\main.o: INIT.h
 ..\main.o: ..\src\UART.h
 ..\main.o: ..\src\ADC.h
-..\main.o: Digital.h
+..\main.o: oleddelay.h
+..\main.o: oled.h
