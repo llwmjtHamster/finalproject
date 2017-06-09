@@ -59,7 +59,7 @@ void mode(void)     //配置系统设备，串行端口
 	{
 				if(rotate == 0)  //风扇状态 0:风扇不转 1:风扇转动
 				{
-				 LPC_GPIO3->DATA  = ~(LPC_GPIO3->DATA);	  //对于现状态 ,取反
+				 LPC_GPIO1->DATA  = ~(LPC_GPIO1->DATA);	  //对于现状态 ,取反
 					rotate=1;
 				}
 				
@@ -68,7 +68,7 @@ void mode(void)     //配置系统设备，串行端口
 	{
 				if(rotate == 1)
 				{
-					LPC_GPIO3->DATA  &= ~(1<<2);	
+					LPC_GPIO1->DATA  |= (1<<8) ;
 						rotate=0;
 				}
 				
@@ -77,7 +77,7 @@ void mode(void)     //配置系统设备，串行端口
 	{
 				if(rotate == 0)
 				{
-				 LPC_GPIO3->DATA  |= (1<<2) ;	
+				 	LPC_GPIO1->DATA  &= ~(1<<8);	
 					rotate=1;
 				}
 				
@@ -97,12 +97,13 @@ void resultmode(void)
 	{
 		if(result > 27)
 		{
-			LPC_GPIO1->DATA |= (1<<2);
+			LPC_GPIO1->DATA &= ~(1<<8);
+			
 			rotate = 1;   //标志风扇旋转
 		}
 		else
 		{
-			LPC_GPIO1->DATA &= ~(1<<2);
+		LPC_GPIO1->DATA |= (1<<8);
 			rotate = 0;  //标志风扇不旋转
 		}
 	}
@@ -173,13 +174,13 @@ void PIOINT3_IRQHandler()     //风扇中断
 void MYGPIOINIT(void)
 {
 		LPC_SYSCON->SYSAHBCLKCTRL |= (1 << 16);
-		LPC_IOCON->PIO1_5  &= ~0x07;         //最低三位清零
-    LPC_IOCON->PIO1_5  |= 0x01;          //配置P1.11为GPIO
+		LPC_IOCON->PIO1_8  &= ~0x07;         //最低三位清零
+    LPC_IOCON->PIO1_8  |= 0x01;          //配置P1.11为GPIO
 	  LPC_SYSCON->SYSAHBCLKCTRL &= ~(1 << 16);//关闭IOCON配置时钟
 		LPC_SYSCON->SYSAHBCLKCTRL |= (1 << 6);  //使能GPIO时钟
-		LPC_GPIO1->DIR  |= (1<<5);  //配置P1.11为输出
-		LPC_GPIO1->DATA  &= ~(1<<5);//将P1.11置为低电平
-		LPC_GPIO1->DATA  |= (1<<5);
+		LPC_GPIO1->DIR  |= (1<<8);  //配置P1.11为输出
+		LPC_GPIO1->DATA  &= ~(1<<8);//将P1.11置为低电平
+		//LPC_GPIO1->DATA  |= (1<<7);
 }
 
 /********************************************************************************

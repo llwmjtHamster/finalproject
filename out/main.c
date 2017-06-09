@@ -28,15 +28,18 @@ int main(void)
     OLED_ShowString(0,2,"Temperature :");       //显示字符串"Temperature :"
   	OLED_Clear();
     OLED_ShowString(0,6,"Author :126");        //显示字符串"Author :"
-	while(1)
-	{
-		result=ADCData(); //当前温度
-		resultmode();   //超过28摄氏度自动旋转风扇否则不旋转
-		Judge();        //判断是否输入0xff
-		translation();    //显示温度  带转换
-		t++;
-//		OLED_ShowNum(0,4,t,5,16);   //显示数字变量
-		if(t>=20000)t=0;
-		delay_ms(500);          //延时500ms
+	while(1){
+	LPC_GPIO1->DATA =0;
 	}
+//	while(1)
+//	{
+//		result=ADCData(); //当前温度
+//		resultmode();   //超过28摄氏度自动旋转风扇否则不旋转
+//		Judge();        //判断是否输入0xff
+//		translation();    //显示温度  带转换
+//		t++;
+////		OLED_ShowNum(0,4,t,5,16);   //显示数字变量
+//		if(t>=20000)t=0;
+//		delay_ms(500);          //延时500ms
+//	}
 }

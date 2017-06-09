@@ -27,10 +27,6 @@ Project File Date:  06/07/2017
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 2 (build 183)', folder: 'C:\Program Files (x86)\ARM\ARMCC\Bin'
 Rebuild target 'final'
-compiling UART.c...
-..\src\UART.h(14): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\src\UART.c: 1 warning, 0 errors
 compiling main.c...
 ..\src\UART.h(14): warning:  #1-D: last line of file ends without a newline
   #endif
@@ -38,7 +34,13 @@ compiling main.c...
   #endif
 oleddelay.h(7): warning:  #1-D: last line of file ends without a newline
   #endif 
-main.c: 3 warnings, 0 errors
+main.c(22): warning:  #177-D: variable "t" was declared but never referenced
+  	int t=0;
+main.c: 4 warnings, 0 errors
+compiling UART.c...
+..\src\UART.h(14): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\src\UART.c: 1 warning, 0 errors
 compiling ADC.c...
 ..\src\ADC.h(11): warning:  #1-D: last line of file ends without a newline
   #endif
@@ -51,11 +53,12 @@ compiling INIT.c...
   #endif
 ..\src\ADC.h(11): warning:  #1-D: last line of file ends without a newline
   #endif
-INIT.c(121): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+INIT.c(122): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
   			sprintf(buff,"temperature : %f",result);
-INIT.c(127): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+INIT.c(128): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
   			sprintf(buff,"temperature : %f",result);
 INIT.c: 4 warnings, 0 errors
+assembling startup_LPC11xx.s...
 compiling oled.c...
 oleddelay.h(7): warning:  #1-D: last line of file ends without a newline
   #endif 
@@ -68,11 +71,10 @@ oleddelay.h(7): warning:  #1-D: last line of file ends without a newline
 oleddelay.c(30): warning:  #1-D: last line of file ends without a newline
   }
 oleddelay.c: 2 warnings, 0 errors
-assembling startup_LPC11xx.s...
 compiling system_LPC11xx.c...
 linking...
-Program Size: Code=10528 RO-data=2536 RW-data=824 ZI-data=680  
-"..\finalproject.axf" - 0 Error(s), 14 Warning(s).
+Program Size: Code=2528 RO-data=2296 RW-data=24 ZI-data=608  
+"..\finalproject.axf" - 0 Error(s), 15 Warning(s).
 
 <h2>Software Packages used:</h2>
 
