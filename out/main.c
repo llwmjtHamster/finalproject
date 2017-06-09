@@ -31,7 +31,7 @@ int main(void)
 	while(1)
 	{
 		result=ADCData(); //当前温度
-		resultmode();   //超过18摄氏度自动旋转风扇否则不旋转
+		resultmode();   //超过28摄氏度自动旋转风扇否则不旋转
 		Judge();        //判断是否输入0xff
 		translation();    //显示温度  带转换
 		t++;
