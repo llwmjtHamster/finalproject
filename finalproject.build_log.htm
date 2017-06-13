@@ -27,16 +27,6 @@ Project File Date:  06/07/2017
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 2 (build 183)', folder: 'C:\Program Files (x86)\ARM\ARMCC\Bin'
 Rebuild target 'final'
-compiling main.c...
-..\src\UART.h(14): warning:  #1-D: last line of file ends without a newline
-  #endif
-..\src\ADC.h(11): warning:  #1-D: last line of file ends without a newline
-  #endif
-oleddelay.h(7): warning:  #1-D: last line of file ends without a newline
-  #endif 
-main.c(22): warning:  #177-D: variable "t" was declared but never referenced
-  	int t=0;
-main.c: 4 warnings, 0 errors
 compiling UART.c...
 ..\src\UART.h(14): warning:  #1-D: last line of file ends without a newline
   #endif
@@ -47,6 +37,14 @@ compiling ADC.c...
 ADC.c(91): warning:  #1-D: last line of file ends without a newline
   	
 ADC.c: 2 warnings, 0 errors
+compiling main.c...
+..\src\UART.h(14): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\src\ADC.h(11): warning:  #1-D: last line of file ends without a newline
+  #endif
+oleddelay.h(7): warning:  #1-D: last line of file ends without a newline
+  #endif 
+main.c: 3 warnings, 0 errors
 compiling Digital.c...
 compiling INIT.c...
 ..\src\UART.h(14): warning:  #1-D: last line of file ends without a newline
@@ -58,13 +56,13 @@ INIT.c(122): warning:  #167-D: argument of type "unsigned char *" is incompatibl
 INIT.c(128): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
   			sprintf(buff,"temperature : %f",result);
 INIT.c: 4 warnings, 0 errors
-assembling startup_LPC11xx.s...
 compiling oled.c...
 oleddelay.h(7): warning:  #1-D: last line of file ends without a newline
   #endif 
 oled.c(280): warning:  #1-D: last line of file ends without a newline
   }  
 oled.c: 2 warnings, 0 errors
+assembling startup_LPC11xx.s...
 compiling oleddelay.c...
 oleddelay.h(7): warning:  #1-D: last line of file ends without a newline
   #endif 
@@ -73,8 +71,8 @@ oleddelay.c(30): warning:  #1-D: last line of file ends without a newline
 oleddelay.c: 2 warnings, 0 errors
 compiling system_LPC11xx.c...
 linking...
-Program Size: Code=2528 RO-data=2296 RW-data=24 ZI-data=608  
-"..\finalproject.axf" - 0 Error(s), 15 Warning(s).
+Program Size: Code=10512 RO-data=2536 RW-data=824 ZI-data=680  
+"..\finalproject.axf" - 0 Error(s), 14 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -100,9 +98,9 @@ Package Vendor: Keil
    * Component: ARM::CMSIS:CORE:4.3.0
 
    * Component: Keil::Device:Startup:1.0.0
-      Source file:   Device\Source\system_LPC11xx.c
       Source file:   Device\Source\ARM\startup_LPC11xx.s
-Build Time Elapsed:  00:00:02
+      Source file:   Device\Source\system_LPC11xx.c
+Build Time Elapsed:  00:00:03
 </pre>
 </body>
 </html>
